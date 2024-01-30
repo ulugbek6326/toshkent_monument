@@ -4,7 +4,7 @@ from django.db import models
 
 class Books(models.Model):
     name = models.CharField(max_length=255)
-    book_file = models.FileField()
+    book_file = models.FileField(upload_to='static/book')
     
     class Meta:
         verbose_name = 'Elektron adabiyot'

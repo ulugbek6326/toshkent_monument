@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class News(models.Model):
-    img = models.ImageField()
+    img = models.ImageField(upload_to='static/image/new_image')
     date = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=255)
     description = RichTextField()

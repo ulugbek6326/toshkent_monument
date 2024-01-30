@@ -11,10 +11,14 @@ from .aboutforwe import get_object
 from media.models import Media
 from media.serializers import MediaSerializer
 
+from ..pagination import ResultPagination
+
+
 
 class MediaListView(generics.ListAPIView):
     queryset = Media.objects.all()
     serializer_class = MediaSerializer
+    pagination_class = ResultPagination
     
     @swagger_auto_schema(
         manual_parameters=[

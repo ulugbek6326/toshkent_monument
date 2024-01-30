@@ -6,12 +6,9 @@ from ckeditor.fields import RichTextField
 
 # Create your models here.
 class AboutForWe(models.Model):
-    img = models.ImageField()
+    img = models.ImageField(upload_to='static/image/aboutforwe_image')
     description = RichTextField()
-    
-    # def admin_photo(self):
-    #     return mark_safe('<img src="{}" width="100" height="100" />'.format(self.img.url))
-    
+        
     class Meta:
         verbose_name = 'Biz haqimizda'
         verbose_name_plural = 'Biz haqimizda'

@@ -48,4 +48,3 @@ class AboutForWeAdmin(admin.ModelAdmin):
     
     img.short_description = 'Rasm'
     img.allow_tags = True
-    # 5614 6806 1284 7216

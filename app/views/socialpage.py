@@ -8,9 +8,13 @@ from .aboutforwe import get_object
 from socialpages.models import SocialPages
 from socialpages.serializers import SocialPageSerializer
 
+from ..pagination import ResultPagination
+
+
 class SocialPageListView(generics.ListAPIView):
     queryset = SocialPages.objects.all()
     serializer_class = SocialPageSerializer
+    pagination_class = ResultPagination
     
 @api_view(['GET'])
 def socialpage_detail(request, pk):

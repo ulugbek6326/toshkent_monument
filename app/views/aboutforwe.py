@@ -8,6 +8,8 @@ from rest_framework.decorators import api_view
 from aboutforme.models import AboutForWe
 from aboutforme.serializers import AboutForWeSerializer
 
+from ..pagination import ResultPagination
+
 def get_object(pk, main_class=None):
     try:
         return main_class.objects.get(pk=pk)
@@ -17,6 +19,7 @@ def get_object(pk, main_class=None):
 class AboutForWeListView(generics.ListAPIView):
     queryset = AboutForWe.objects.all()
     serializer_class = AboutForWeSerializer
+    pagination_class = ResultPagination
     
 @api_view(['GET'])
 def aboutforve_detail(request, pk):

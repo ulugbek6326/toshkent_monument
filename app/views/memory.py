@@ -8,9 +8,13 @@ from .aboutforwe import get_object
 from memory.models import Memory
 from memory.serializers import MemorySerializer
 
+from ..pagination import ResultPagination
+
+
 class MemoryListView(generics.ListAPIView):
     queryset = Memory.objects.all()
     serializer_class = MemorySerializer
+    pagination_class = ResultPagination
     
 
 @api_view(['GET'])

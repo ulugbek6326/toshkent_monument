@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Items(models.Model):
-    img = models.ImageField()
+    img = models.ImageField(upload_to='static/image/item_image')
     title = models.CharField(max_length=255)
     description = RichTextField()
     

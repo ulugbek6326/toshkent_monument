@@ -8,9 +8,13 @@ from .aboutforwe import get_object
 from contacts.models import Contacts
 from contacts.serializers import ContactSerializer
 
+from ..pagination import ResultPagination
+
+
 class ContactListView(generics.ListAPIView):
     queryset = Contacts.objects.all()
     serializer_class = ContactSerializer
+    pagination_class = ResultPagination
     
     
 @api_view(['GET'])

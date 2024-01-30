@@ -9,7 +9,7 @@ from .views.memory import MemoryListView, memory_detail
 from .views.new import NewListView, new_detail
 from .views.scientist import ScientistListView, scientist_detail
 from .views.socialpage import SocialPageListView, socialpage_detail
-
+from.views.full_text_search import full_text_search, max_min_search
 
 urlpatterns = [
     path('aboutforwe/', AboutForWeListView.as_view(), name='aboutforwe'),
@@ -38,4 +38,7 @@ urlpatterns = [
     
     path('socialpage/',SocialPageListView.as_view(), name='socialpage'),
     path('socialpage_detail/<int:pk>', socialpage_detail, name='socialpage_detail'),
+    
+    path('search/', full_text_search, name='search'),
+    path('max_min_search/', max_min_search, name='max_min_search'),
 ]

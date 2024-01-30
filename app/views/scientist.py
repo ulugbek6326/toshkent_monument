@@ -8,9 +8,13 @@ from .aboutforwe import get_object
 from scientists.models import Scientists
 from scientists.serializers import ScientistSerializer
 
+from ..pagination import ResultPagination
+
+
 class ScientistListView(generics.ListAPIView):
     queryset = Scientists
     serializer_class = ScientistSerializer
+    pagination_class = ResultPagination
     
     
 @api_view(['GET'])

@@ -8,11 +8,13 @@ from .aboutforwe import get_object
 from news.models import News
 from news.serializers import NewsSerializer
 
+from ..pagination import ResultPagination
+
 
 class NewListView(generics.ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
-    
+    pagination_class = ResultPagination
     
 @api_view(['GET'])
 def new_detail(request, pk):

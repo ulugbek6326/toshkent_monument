@@ -8,9 +8,13 @@ from .aboutforwe import get_object
 from books.models import Books
 from books.serializers import BookSerializer
 
+from ..pagination import ResultPagination
+
+
 class BookListView(generics.ListAPIView):
     queryset = Books.objects.all()
     serializer_class = BookSerializer
+    pagination_class = ResultPagination
     
     
 @api_view(['GET'])
