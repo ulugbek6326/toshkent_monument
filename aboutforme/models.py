@@ -24,12 +24,10 @@ class AboutForWeImage(models.Model):
     
     def __str__(self):
         return self.image.url
-    
+
     def admin_photo(self):
-        return mark_safe('<img src="{}" width="100" height="100" />'.format(self.img.url))
-    
+        return mark_safe('<img src="{}" width="100" height="100" />'.format(self.logo_image.url))
+
     admin_photo.short_description = 'Rasm'
     admin_photo.allow_tags = True
-        
-        
     

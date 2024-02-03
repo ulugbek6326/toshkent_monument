@@ -1,5 +1,7 @@
+from django.conf.urls.static import static
 from django.urls import path
 
+from config import settings
 from .views.aboutforwe import AboutForWeListView, aboutforve_detail
 from .views.book import BookListView, book_detail
 from .views.contact import ContactListView, contact_detail
@@ -42,3 +44,6 @@ urlpatterns = [
     path('search/', full_text_search, name='search'),
     path('max_min_search/', max_min_search, name='max_min_search'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

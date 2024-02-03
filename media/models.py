@@ -7,7 +7,7 @@ class Media(models.Model):
                             choices=[
                                 ('foto', 'foto'),
                                 ('video', 'video'),
-                            ])
+                            ], default='foto')
     title = models.CharField(max_length=255)
     foto_video = models.FileField(upload_to='static/image/media_image', blank=True, null=True)
     link = models.TextField(blank=True, null=True)
