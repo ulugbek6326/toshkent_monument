@@ -6,4 +6,4 @@ from .models import Scientists
 class ScientistSerializer(serializers.ModelSerializer):
     class Meta:
         model=Scientists
-        fields='__all__'
+        fields = ('full_name', 'degree', 'discription', 'birthday', 'diedday',)

@@ -6,10 +6,10 @@ from ckeditor.fields import RichTextField
 
 class Memory(models.Model):
     title = models.CharField(max_length=255)
-    img = models.ImageField(upload_to='static/image/memory_image')
+    img = models.ImageField(upload_to='static/image/memory_image', blank=True, null=True)
     description = RichTextField()
     like = models.PositiveIntegerField(default=0, blank=True, null=True)
-    file = models.FileField(upload_to='static/image/memory_image')
+    video = models.FileField(upload_to='static/image/memory_image', blank=True, null=True)
     longitude = models.FloatField()
     latitude = models.FloatField()
     

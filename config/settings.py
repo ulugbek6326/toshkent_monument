@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     # project's apps
     'app',
     'memory',
-    'media',
     'news',
     'items',
     'contacts',

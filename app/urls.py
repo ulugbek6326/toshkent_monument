@@ -6,7 +6,6 @@ from .views.aboutforwe import AboutForWeListView, aboutforve_detail
 from .views.book import BookListView, book_detail
 from .views.contact import ContactListView, contact_detail
 from .views.item import ItemListView, item_detail
-from .views.media import MediaListView, media_detail
 from .views.memory import MemoryListView, memory_detail
 from .views.new import NewListView, new_detail
 from .views.scientist import ScientistListView, scientist_detail
@@ -25,9 +24,6 @@ urlpatterns = [
     
     path('item/', ItemListView.as_view(), name='item'),
     path('item_detail/<int:pk>/', item_detail, name='item_detail'),
-    
-    path('media/', MediaListView.as_view(), name='media'),
-    path('media_detail/<int:pk>/', media_detail, name='media_detail'),
     
     path('memory/', MemoryListView.as_view(), name='memory'),
     path('memory_detail/<int:pk>/', memory_detail, name='memory_detail'),

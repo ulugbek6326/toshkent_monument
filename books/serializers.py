@@ -6,4 +6,4 @@ from .models import Books
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Books
-        fields = '__all__'
+        fields = ('name', 'book_file',)

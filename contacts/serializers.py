@@ -6,4 +6,4 @@ from .models import Contacts
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contacts
-        fields = '__all__'
+        fields = ('full_name', 'email', 'description',)

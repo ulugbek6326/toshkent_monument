@@ -5,7 +5,7 @@ from .models import AboutForWe
 class AboutForWeSerializer(serializers.ModelSerializer):
     class Meta:
         model=AboutForWe
-        fields = '__all__'
+        fields = ('img', 'description',)
 
     def to_representation(self, instance):
         data = super().to_representation(instance)

@@ -6,4 +6,4 @@ from .models import SocialPages
 class SocialPageSerializer(serializers.ModelSerializer):
     class Meta:
         model=SocialPages
-        fields = '__all__'
+        fields = ('instagram', 'telegram', 'facebook', 'address', 'phone', 'email',)
